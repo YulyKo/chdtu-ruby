@@ -1,0 +1,10 @@
+c = 45
+d = 3435
+x1 = (d * c).abs
+x2 = x1 - 3
+in_sin_3 = c * x1**3 + d * x2**2 - c * d
+sin_3 = (3 * Math.sin(in_sin_3) - Math.sin(in_sin_3)).abs
+square_root = Math.sqrt((c * x1**3 + d * x2**2 - x1)**2 + 3.14)
+tg = Math.tan(c * x1**3 + d*x2**2 - x1)
+result = (sin_3 / square_root).abs + tg
+puts "result = #{result}"
