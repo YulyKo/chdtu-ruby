@@ -33,4 +33,16 @@ end
 bisector_a = calculate_l(side_a, side_b, side_c)
 bisector_b = calculate_l(side_b, side_c, side_a)
 bisector_c = calculate_l(side_c, side_b, side_a)
+
 puts "bisector of a = #{bisector_a} || bisector of b = #{bisector_b} || bisector_of c = #{bisector_c}"
+
+def calculating_s(a, b, c)
+  p = (a + b + c) / 2
+  s = Math.sqrt(p * ( p - a ) * ( p - b ) * ( p - c ))
+end
+
+radius_of_the_circle_described = 0.25 * ((side_a * side_b * side_c) / calculating_s(side_a, side_b, side_c))
+puts "the radius of the circle described = #{radius_of_the_circle_described}"
+
+radius_of_the_inscribed_circle = calculating_s(side_a, side_b, side_c) / ((side_a + side_b + side_c) / 2)
+puts "the radius of the inscribed circle = #{radius_of_the_inscribed_circle}"
