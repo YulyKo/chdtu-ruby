@@ -10,7 +10,7 @@ end
 def checkExistenceOfTriangle (a, b, c)
     if (a + b >= c) and (a + c >= b) && (b + c >= a)
       findAngle(a, b, c)
-    elsif (a + b) > c || (a + c) > b || (b + c) > a
+    elsif (a + b) > c && (a + c) > b && (b + c) > a
       puts 'this triangle is not existence'
     end
 end
