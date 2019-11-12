@@ -5,7 +5,7 @@ end
 
 def task array
     for i in 0...array.size do
-        if array[i] == array.max
+        if array[i].abs == array.max
             array[i] = 1
         else
             array[i] = 0
